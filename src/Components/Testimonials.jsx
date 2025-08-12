@@ -1,10 +1,16 @@
 import React from 'react';
 import { assets, testimonialsData } from '../assets/assets';
+import { motion } from 'framer-motion';
 
 const Testimonials = () => {
     return (
-        <div className='container mx-auto py-4 pt-20
-        md:px-10 lg:px-10 overflow-hidden  w-full bg-gray'
+        <motion.div
+            initial={{ opacity: 0, y: -200 }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className='container mx-auto py-4 pt-20
+        md:px-10 lg:px-10 overflow-hidden  w-full '
             id='Testimonials'>
             <h1 className='text-2xl sm:text-4xl font-bold mb-2
             text-center'>
@@ -16,13 +22,15 @@ const Testimonials = () => {
                 Real Stories from those who Found Home with Us
             </p>
             <div className='flex flex-wrap justify-center gap-8 '>
-                {testimonialsData.map((testimonialsData, index) =>(
-                    <div key={index} className="max-w-[340px] 
+                {testimonialsData.map((testimonialsData, index) => (
+                    <div
+                        key={index}
+                        className="max-w-[340px] 
                     shadow-2xl rounded px-6 py-12 text-center"
->
-                        <img className='w-20 h-20 rounded-full mx-auto mb-4' 
-                        src={testimonialsData.image}
-                        alt={testimonialsData.alt} />
+                    >
+                        <img className='w-20 h-20 rounded-full mx-auto mb-4'
+                            src={testimonialsData.image}
+                            alt={testimonialsData.alt} />
                         <h2 className='text-xl font-semibold mb-2'>
                             {testimonialsData.name}
                         </h2>
@@ -30,7 +38,7 @@ const Testimonials = () => {
                             {testimonialsData.title}
                         </p>
                         <div className='flex justify-center items-center mt-4 text-red-500'>
-                            {Array.from({length: testimonialsData.rating},
+                            {Array.from({ length: testimonialsData.rating },
                                 (item, index) => (
                                     <img key={index} src={assets.star_icon} alt="" />
                                 ))}
@@ -43,7 +51,7 @@ const Testimonials = () => {
                 ))}
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 

@@ -20,16 +20,16 @@ const Nav = () => {
                 {/* Desktop Nav Links */}
                 <ul className='hidden md:flex gap-7 text-white font-semibold'>
                     <li className='cursor-pointer'>
-                        <a onClick={() => setShowMobileMenu(false)} href="#Header" className='hover:text-gray-400'>Home</a>
+                        <a onClick={() => setShowMobileMenu(false)} href="#Header" className='hover:text-gray-600'>Home</a>
                     </li>
                     <li className='cursor-pointer'>
-                        <a onClick={() => setShowMobileMenu(false)} href="#about" className='hover:text-gray-400'>About</a>
+                        <a onClick={() => setShowMobileMenu(false)} href="#about" className='hover:text-gray-600'>About</a>
                     </li>
                     <li className='cursor-pointer'>
-                        <a onClick={() => setShowMobileMenu(false)} href="#Projects" className='hover:text-gray-400'>Projects</a>
+                        <a onClick={() => setShowMobileMenu(false)} href="#Projects" className='hover:text-gray-600'>Projects</a>
                     </li>
                     <li className='cursor-pointer'>
-                        <a onClick={() => setShowMobileMenu(false)} href="#Testimonials" className='hover:text-gray-400'>Testimonials</a>
+                        <a onClick={() => setShowMobileMenu(false)} href="#Testimonials" className='hover:text-gray-600'>Testimonials</a>
                     </li>
                 </ul>
 

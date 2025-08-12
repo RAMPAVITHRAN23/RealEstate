@@ -1,9 +1,15 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { motion } from 'framer-motion'
 
 const About = () => {
     return (
-        <div className='container flex flex-col items-center justify-center
+        <motion.div 
+        initial={{ opacity: 0, x: 200 }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+        className='container flex flex-col items-center justify-center
         mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden
         'id='about'>
             <h1 className='text-2xl sm:text-4xl
@@ -26,19 +32,19 @@ const About = () => {
                 2xl:pr-28'>
                     <div>
                         <p className='text-4xl font-medium text-gray-800'>10+</p>
-                        <p className='text-4xl font-medium text-gray-800'>Years of Experience</p>
+                        <p className='text-xl font-medium text-gray-600'>Years of Experience</p>
                     </div>
                     <div>
                         <p className='text-4xl font-medium text-gray-800'>12+</p>
-                        <p className='text-4xl font-medium text-gray-800'>Projects completed</p>
+                        <p className='text-xl font-medium text-gray-600'>Projects completed</p>
                     </div>
                     <div>
                         <p className='text-4xl font-medium text-gray-800'>20+</p>
-                        <p className='text-4xl font-medium text-gray-800'>Mn. Sq.Ft Delivered</p>
+                        <p className='text-xl font-medium text-gray-600'>Mn. Sq.Ft Delivered</p>
                     </div>
                     <div>
                         <p className='text-4xl font-medium text-gray-800'>25+</p>
-                        <p className='text-4xl font-medium text-gray-800'>Ongoing Projects</p>
+                        <p className='text-xl font-medium text-gray-600'>Ongoing Projects</p>
                     </div>
 
                 </div>
@@ -56,7 +62,7 @@ const About = () => {
 
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 
